@@ -61,13 +61,42 @@ export function validacao() {
     alert("Voce não preencheu o nome ou a idade da forma correta");
   } else if (input.value === "" || inputNumero.value < 18) {
     alert("Voce nao pode acessar porque voce é nenem");
-  }else if ( inputNumero.value <= 0 ) {
+  } else if (inputNumero.value <= 0) {
     alert("Voce nem nasceu ainda");
-  }
-   else {
+  } else {
     alert("Voce pode acessar o site indevido");
+  }
+}
+//Switch case
+function swicthCase() {
+  let expressao;
+  expressao = expressao.toLowerCase(); //faz com que tudo que for inserido no input por exemplo retorne em minusculo,indepedente se foi escrito em maisculo
+  switch (expressao) {
+    case "azul":
+      break;
+    case "vermelho":
+      break;
+    case "verde":
+      break;
+     default : 
+  }
+}
+//Laço de repetição
+export function lacoRepeticao() {
+  let i = 0
+  for(i; i<101; i++){
+    document.getElementById('numero').value += i + ', '
   }
 }
 
 //Monstra no console
-console.log(lista, objeto, lista2, listasJuntos, maiorNumero, menorNumero);
+console.log(
+  lista,
+  objeto,
+  lista2,
+  listasJuntos,
+  maiorNumero,
+  menorNumero,
+  swicthCase,
+  lacoRepeticao
+);
