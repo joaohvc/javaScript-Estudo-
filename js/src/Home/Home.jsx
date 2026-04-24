@@ -14,8 +14,8 @@ function Home() {
     if (input === "" || inputNumero === "") {
       setMensagem("Voce não preencheu o nome ou a idade da forma correta");
       setAlerta(true);
-    } else if (input === "" || inputNumero < 18) {
-      setMensagem("Voce nao pode acessar porque voce é nenem");
+    } else if (input === "" || inputNumero < 18 || inputNumero > 110) {
+      setMensagem("Sua idade não é permitida no nosso site");
       setAlerta(true);
     } else if (inputNumero <= 0) {
       setMensagem("Voce nem nasceu ainda");
@@ -72,6 +72,7 @@ function Home() {
           Validar
         </button>
         <Link to='/cadastro'><button>Cadastro</button></Link>
+        <option selected disabled>ano</option>
       </div>
       {Alerta()}
     </div>

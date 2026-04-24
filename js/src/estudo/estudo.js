@@ -78,16 +78,71 @@ function swicthCase() {
       break;
     case "verde":
       break;
-     default : 
+    default:
   }
 }
 //Laço de repetição
 export function lacoRepeticao() {
-  let i = 0
-  for(i; i<101; i++){
-    document.getElementById('numero').value += i + ', '
+  let i = 0;
+  for (i; i < 101; i++) {
+    document.getElementById("numero").value += i + ", ";
   }
 }
+//class
+class Carro {
+  //Isso é meio que um escopo criado, e depois voce so preenche, para precisar ficar repitindo
+  constructor(valor1, valor2, valor3) {
+    this.marca = valor1;
+    this.modelo = valor2;
+    this.ano = valor3;
+  }
+}
+
+const uno = new Carro("Fiat", "Uno", 2001); //aqui voce preenche o escopo
+const gol = new Carro("volkswagen", "gol", 2011);
+console.log(uno);
+console.log(gol.ano);
+
+//Manipular datas
+
+let data = new Date(); //comando para pegar a data
+//console.log(data)
+let ano = data.getFullYear(); //pegar so o ano atual com quatro digitos
+console.log(ano);
+let mes = data.getMonth(); //pegar o numero do mes atual, começando de 0 e terminando em 11
+let mesCerto = mes + 1; // pegar o numero do mes e adicionar mais um para deixar correto
+const mesesDoAno = [
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro",
+];
+let mesesEscritos = mesesDoAno[mes]; // colocando para aparecer os meses escritos
+console.log(mesCerto, mesesEscritos);
+
+let diaMes = data.getDate(); //monstrando o dia do mes
+console.log(diaMes);
+
+let diaSemana = data.getDay(); //monstando dia da semana que começa em 0 e termina em 6
+const diaDaSemana = [
+  "domingo",
+  "segunda",
+  "terça",
+  "quarta",
+  "quinta",
+  "sexta",
+  "sabado",
+];
+let diaDaSemanaEscrito = diaDaSemana[diaSemana];
+console.log(diaSemana, diaDaSemanaEscrito);
 
 //Monstra no console
 console.log(
@@ -98,5 +153,5 @@ console.log(
   maiorNumero,
   menorNumero,
   swicthCase,
-  lacoRepeticao
+  lacoRepeticao,
 );
